@@ -1,0 +1,15 @@
+<Window x:Class="PhotoExplorer.Desktop.HelpWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Справка · Фото проводник" Width="660" Height="760" WindowStartupLocation="CenterOwner" ResizeMode="CanResizeWithGrip">
+  <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{DynamicResource Canvas}"><StackPanel Margin="32">
+    <TextBlock Text="Справка и горячие клавиши" FontSize="24" FontWeight="SemiBold" Margin="0,0,0,10"/>
+    <TextBlock Text="Управление Фото проводником" Foreground="{DynamicResource Muted}" Margin="0,0,0,28"/>
+    <TextBlock Text="НАВИГАЦИЯ" Foreground="{DynamicResource Accent}" FontSize="11" FontWeight="SemiBold"/>
+    <TextBlock Margin="0,12,0,26" LineHeight="28" Text="Ctrl+O — выбрать папку&#10;Ctrl+L — ввести путь к папке&#10;Ctrl+F — поиск по имени файла&#10;Alt+← / Alt+→ — назад / вперёд&#10;Alt+↑ — родительская папка&#10;F5 — обновить содержимое&#10;Стрелки — выбрать изображение&#10;Enter / F11 / двойной щелчок — полный экран"/>
+    <TextBlock Text="ПОЛНОЭКРАННЫЙ ПРОСМОТР" Foreground="{DynamicResource Accent}" FontSize="11" FontWeight="SemiBold"/>
+    <TextBlock Margin="0,12,0,26" LineHeight="28" Text="← / → — предыдущее / следующее изображение&#10;Пробел — слайд-шоу / пауза&#10;Колесо мыши / + / − — масштаб&#10;1 — оригинальный размер; 0 — по размеру экрана&#10;Перетаскивание — перемещение увеличенного изображения&#10;Esc / F11 — вернуться к папке"/>
+    <TextBlock Text="КОМАНДНАЯ СТРОКА" Foreground="{DynamicResource Accent}" FontSize="11" FontWeight="SemiBold"/>
+    <TextBox IsReadOnly="True" Margin="0,14,0,20" FontFamily="Cascadia Code, Consolas" FontSize="12" TextWrapping="Wrap" Text="PhotoExplorer.exe --folder &quot;D:\Фото&quot;&#10;PhotoExplorer.exe --file &quot;D:\Фото\кадр.jpg&quot; --fullscreen&#10;PhotoExplorer.exe --demo --light&#10;PhotoExplorer.exe --help"/>
+    <TextBlock Text="Поддерживаются JPEG, PNG, BMP, GIF, TIFF, ICO, WDP и JXR. Для GIF и многостраничного TIFF отображается первый кадр. RAW, HEIC и WebP не входят в набор поддерживаемых форматов." TextWrapping="Wrap" Foreground="{DynamicResource Muted}" LineHeight="21"/>
+    <TextBlock Text="Поиск учитывает имя файла. Включите «Искать в подпапках», чтобы расширить область поиска. Папки-ссылки не обходятся рекурсивно. Миниатюры сохраняются в SQLite; исходные изображения остаются неизменными." TextWrapping="Wrap" Foreground="{DynamicResource Muted}" LineHeight="21" Margin="0,14,0,22"/>
+    <Button Content="Понятно" IsCancel="True" HorizontalAlignment="Right" Style="{StaticResource PrimaryButton}"/>
+  </StackPanel></ScrollViewer>
+</Window>
