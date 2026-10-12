@@ -15,7 +15,7 @@ dotnet run --project .\src\PhotoExplorer.Desktop\PhotoExplorer.Desktop.csproj
 dotnet run --project .\src\PhotoExplorer.Desktop\PhotoExplorer.Desktop.csproj -- --demo
 ```
 
-## Сборка версии для показа
+## Сборка 
 
 ```powershell
 dotnet publish .\src\PhotoExplorer.Desktop\PhotoExplorer.Desktop.csproj -c Release -r win-x64 --self-contained true -o .\publish
